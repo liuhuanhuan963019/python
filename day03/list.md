@@ -1,0 +1,9 @@
+1。append 在列表后面追加元素
+2。count 统计列表中元素的次数
+3。extend 扩展相当于批量添加
+4。index 获取指定元素索引号
+5。insert 在指定位置插入
+6。pop 删除最后一个元素
+7。remove 移除左边找到第一个元素
+8。reverse 反转列表
+9。sort 列表排序
