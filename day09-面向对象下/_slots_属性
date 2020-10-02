@@ -1,0 +1,28 @@
+'''
+    _slots_来限制添加的实例的属性
+    只有在_slots_中的属性才能被添加，没有在_slots中的变量中的属性不可以添加
+    _slots_子类无法继承，必须在当前类中使用
+
+    作用：
+        可以限制添加的属性
+        节约内存空间
+'''
+class Student:
+    #通过_slots_限定之后就不会有_dict的出现
+    __slots__ = {"name","age","weight"}
+    def __str__(self):
+        return '{}...{}'.format(self.name,self.age)
+        pass
+
+stu = Student()
+stu.name = "lhh"
+stu.age = 20
+stu.weight = 100    #会报错  因为在_slots_中规定了属性可以添加的类型
+# print(stu.__dict__)  #所有可用的属性都在这里存储 不足的地方就是占用的内存比较大
+print(stu)
+
+'''
+    当子类没有限制_slots_时，那么不会继承父类的_slots，此时子类的属性可以随意添加
+    当子类限制了_slots时，那么就会继承父类的_slots,此时子类的范围就是父类+子类定义的范围
+
+'''
