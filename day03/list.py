@@ -33,3 +33,11 @@ print(li)
 print(li)
 li.pop(1)  #移除制定的项 参数是索引值
 print(li)
+
+
+#删除指定元素的值
+a = ['a','b','c','d','e','f']
+while 'a' in a:
+    a.remove('a')
+
+print(a)

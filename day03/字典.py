@@ -60,6 +60,22 @@ print(listA*2)
 #in 对象是否存在 返回一个bol类型的值
 print('o' in str1)
 
+#使用用户输入来填充字典
+resposes = {}
+
+#设置一个标志，指出调查是否继续
+polling_active = True
+
+while polling_active:
+    # 提示输入被调查者名字和回答
+    name = input('what is your name?')
+    respose = input('what do you do?')
+    resposes[name] = respose
+
+    repeat = input('yea or no?')
+    if repeat == 'no' or repeat == 'No':
+        polling_active = False
+
 
 
 
