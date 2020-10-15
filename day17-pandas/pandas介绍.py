@@ -20,7 +20,7 @@ s = pd.Series([1,2,3,np.nan,3,4])  #pandas的序列
 '''
 print(s)
 
-
+#打印指定格式的数据日期  periods 指定往后衍生几天
 dates = pd.date_range('20201015',periods=6)
 print(dates)
 '''
@@ -29,6 +29,7 @@ print(dates)
               dtype='datetime64[ns]', freq='D')
 '''
 
+#定义6行4列的索引  随机的数据  index或者是row指定行以什么数据显示，colunms指定了列以什么数据显示
 df = pd.DataFrame(np.random.randn(6,4),index=dates,columns=['a','b','c','d'])
 print(df)
 '''
@@ -42,6 +43,7 @@ print(df)
 '''
 
 
+#若不指定行和列显示的序列，默认以0 1 2。。。显示
 df1 = pd.DataFrame(np.arange(12).reshape(3,4))
 print(df1)
 '''
@@ -51,6 +53,7 @@ print(df1)
 2  8  9  10  11
 '''
 
+#指定列名称为'A' 'B' 'C' 'D'等。。。列分别以：后面的数据显示
 df2 = pd.DataFrame({
         'A': 1,
         'B': pd.Timestamp('20201015'),
@@ -67,10 +70,19 @@ print(df2)
 2  1 2020-10-15  1.0  3   test  foo
 3  1 2020-10-15  1.0  3  train  foo
 '''
+#输出多少维的数据 和数据显示的格式
 print(df2.dtypes)
+
+
+#输出列的所有的序号
 print(df2.columns)
+
 #Index(['A', 'B', 'C', 'D', 'E', 'F'], dtype='object')
 
+#输出没一行的values
+print(df2.values)
+
+#describe只可以计算一些类似数字形式的数值的运算，忽略了其他类型的计算
 print(df2.describe())
 '''
         A    C    D
@@ -94,3 +106,5 @@ E                 test  ...                train
 F                  foo  ...                  foo
 [6 rows x 4 columns]    
 '''
+#倒叙  列的序列号由A B C D E 转为 E D C B A  axis = 1 表示以列的形式
+df2.sort_index(axis=1,ascending=False)
