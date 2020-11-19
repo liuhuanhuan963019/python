@@ -101,3 +101,30 @@ git commit -m ""
 git status
 ```
 
+分支操作
+
+```
+git branch 查看当前所在分支
+git branch -a 查看项目所有分支
+git branch -r 查看项目远程分支
+git chectout -b dev 创建本地分支并切换到新创建的分支
+git push origin HEAD -U 将新创建的分支信息推送到github
+git branch -d 分支名称	删除本地的指定分支
+git push orign --delete dev 删除远程分支
+```
+
+用户信息
+
+```
+git config user.name 查看本地名称
+git config user.email 查看本地email
+git config -a 查看本地所有配置
+
+#查看当前用户配置
+git config --global --list 
+
+#查看系统用户配置
+git config --system --list
+
+```
+
