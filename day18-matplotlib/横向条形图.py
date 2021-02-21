@@ -8,7 +8,7 @@ plt.rcParams['axes.unicode_minus'] = False
 waters = ('碳酸饮料','绿茶','矿泉水','果汁','其他')
 buy_number = [6,7,6,1,2]
 
-plt.bar(waters,buy_number)
+plt.barh(waters,buy_number)
 plt.title("男性购买饮用水情况的调查结果")
 plt.savefig("横向条形图",bbox_inches="tight")
 plt.show()

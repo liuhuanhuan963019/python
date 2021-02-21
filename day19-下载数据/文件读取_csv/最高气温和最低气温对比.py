@@ -32,7 +32,7 @@ with open(filename) as f:
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
 #绘制最高气温为红色
-ax.plot(dates, highs, c='red', alpha=0.5)
+ax.plot(dates, highs, c='red', alpha=0.2)
 #最低气温为蓝色
 ax.plot(dates, lows, c='blue', alpha=0.5)
 #两者之间的颜色空格设置为蓝色，透明度为0.1
