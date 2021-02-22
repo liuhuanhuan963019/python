@@ -60,7 +60,7 @@ class TimeTest:
 
     @staticmethod
     def getTime():
-        return time.strftime("%H:%M:%S",time.localtime())  #获取当前的时间
+        return time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())  #获取当前的时间
         pass
     pass
 

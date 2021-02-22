@@ -18,6 +18,8 @@ class Rabbit(Dog):
         # Dog.__init__(self,name,color)  #调用此方法，执行完毕就具有了name,color两种属性
         super().__init__(name,color)  #此方法与上面的方法具有相同的作用，若继承多个父类，则按照顺序去寻找
         pass
+
+    # 重写父类的方法
     def fit(self):
         super().fit()  #调用父类的方法
         print("机器狗叫")
